@@ -1,0 +1,72 @@
+﻿<Window x:Class="GenWords.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenWords"
+        mc:Ignorable="d"
+        Title="Help" Height= "800" Width="800" Foreground="White"
+        WindowState="Maximized">
+    
+    <Window.Resources>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="FontSize" Value = "15"/>
+        </Style>
+        
+    </Window.Resources>
+    
+    <Window.Background>
+        
+        <ImageBrush ImageSource="Resources/depositphotos_446483390-stock-photo-neon-background-purple-and-blue.png"/>
+        
+    </Window.Background>
+
+    <Grid>
+        
+        <StackPanel Height= "680" Width="680" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.7"></SolidColorBrush>
+            </StackPanel.Background>
+            <TextBlock>
+            Спасибо за то, что пользуетесь моей игрой! Этот раздел создан для того,
+чтобы прояснить некоторые непонятные моменты, которые могут у вас возникнуть.
+            </TextBlock>
+            <TextBlock>
+               В игре существует 2 режима: обычный - вы сами вводителе слово и случайный - слово выбирается случайно из словаря. Кнопка под надписью "слово" 
+                с значком крестика возвращает вас в главное меню.
+            </TextBlock>
+            <TextBlock>
+                Количество слов для поиска означает, что именно столько слов вы должны
+ещё составить из данного ниже слова.
+Под надписью "слово" будет написано слово, которое и будет являться базовым для вашей игры
+Если оно вам не понравилось или показалось слишком сложным, вы можете
+нажать на кнопку со стрелкой рядом с этим полем и тогда у программа выберет другое 
+рандомное слово. Цифра, которая находится рядом со знаком вопроса, означает уровень, на котором вы сейчас находитесь. Уровень влияет на размер слова, предоставленного вам для игры.
+            </TextBlock>
+            <TextBlock>
+                Нажимая на квадратики букв 2 раза левой кнопкой мыши, вы сможете добавлять их в поле
+"ответ", при этом, они будут удаляться из поле "слово". Если вы ошиблись, то 
+можете нажать кнопку "стереть", после чего поле "ответ" вновь станет пустым, 
+а "слово" вернётся в изначальное положение.
+            </TextBlock>
+            <TextBlock>
+                Нажимая на кнопку "проверить" вы отправляете ответ, который сравнивается с тем,
+который хранится в программе. Если ответ правильный, то "количество слов для поиска"
+уменьшится и появится возможность вновь ввести слово. Если же ответ неверный, то
+программа уведомит вас об этом и обновит поле "ответ" и "слово", когда "количество слов
+для поиска" не изменится.
+
+            </TextBlock>
+            <TextBlock>
+                После того, как вы нашли все слова вам покажется победная панель, на которой вы сможете выбрать дальнейшее действие:
+                продолжить игру - получение нового уровня и слова посложнее (в обычном режиме это не доступно), начать заново - запуск игры происходит
+                с начальным уровнем, выйти - возврат в основное меню
+            </TextBlock>
+            <Button x:Name="Exit" Content="Закрыть" HorizontalAlignment="Center" Margin="20" Width="150" Height="60" FontSize ="20" Background="White" Click="Exit_Click"></Button>
+        </StackPanel>
+       
+    </Grid>
+</Window>
